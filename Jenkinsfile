@@ -28,7 +28,7 @@ pipeline {
               label 'pl_scripted_docker_dind'
               containerTemplate {
                 name 'maven'
-                image 'maven:3.5.4-jdk-10-slim'
+                image 'nginx:1.15.1'
                 ttyEnabled true
                 command 'cat'
               }
