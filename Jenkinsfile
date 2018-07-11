@@ -19,6 +19,7 @@ pipeline {
           }
           steps {
             echo 'building image'
+            sh 'sleep 60'
           }
         }
         stage('Building Image 2 ') {
