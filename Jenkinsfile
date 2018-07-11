@@ -39,6 +39,7 @@ pipeline {
           steps {
             echo 'building image 2'
             sh 'sleep 50'
+            echo 'another message'
           }
         }
       }
@@ -74,6 +75,12 @@ pipeline {
             echo 'Package 3'
           }
         }
+      }
+    }
+    stage('Forth Stage') {
+      steps {
+        echo 'step1'
+        echo 'step2'
       }
     }
   }
