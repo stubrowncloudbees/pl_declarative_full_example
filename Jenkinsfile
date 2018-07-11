@@ -5,8 +5,15 @@ pipeline {
       parallel {
         stage('Building Image 1') {
           agent {
-            docker {
-              image 'nginx'
+            kubernetes {
+              label 'pl_scripted_docker_dind'
+              containerTemplate {
+                name 'maven'
+                image 'maven:3.3.9-jdk-8-alpine'
+                ttyEnabled true
+                command 'cat'
+              }
+
             }
 
           }
