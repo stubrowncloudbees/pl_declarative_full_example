@@ -28,7 +28,7 @@ pipeline {
               label 'pl_scripted_docker_dind'
               containerTemplate {
                 name 'maven'
-                image 'maven:3.3.9-jdk-8-alpine'
+                image 'maven:3.5.4-jdk-10-slim'
                 ttyEnabled true
                 command 'cat'
               }
@@ -38,6 +38,7 @@ pipeline {
           }
           steps {
             echo 'building image 2'
+            sh 'sleep 50'
           }
         }
       }
