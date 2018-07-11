@@ -4,6 +4,12 @@ pipeline {
     stage('Images') {
       parallel {
         stage('Building Image 1') {
+          agent {
+            docker {
+              image 'nginx'
+            }
+
+          }
           steps {
             echo 'building image'
           }
