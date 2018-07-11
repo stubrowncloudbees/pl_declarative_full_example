@@ -25,7 +25,7 @@ pipeline {
         stage('Building Image 2 ') {
           agent {
             kubernetes {
-              label 'pl_scripted_docker_dind'
+              label 'pl_scripted_docker_dind1'
               containerTemplate {
                 name 'maven'
                 image 'nginx:1.15.1'
