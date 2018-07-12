@@ -8,8 +8,8 @@ pipeline {
             kubernetes {
               label 'pl_declarative_full_example_build_image_1'
               containerTemplate {
-                name 'maven'
-                image 'maven:3.3.9-jdk-8-alpine'
+                name 'nginx'
+                image 'nginx:1.15.1'
                 ttyEnabled true
                 command 'cat'
               }
