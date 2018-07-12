@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('Building Image 1') {
           agent {
-            kubernetes1 {
+            kubernetes {
               label 'pl_declarative_full_example_build_image_1'
               containerTemplate {
                 name 'maven'
@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Building Image 2 ') {
           agent {
-            kubernetes1 {
+            kubernetes {
               label 'pl_declarative_full_example_build_image_2'
               containerTemplate {
                 name 'maven'
