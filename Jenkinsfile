@@ -6,7 +6,7 @@ pipeline {
         stage('Building Image 1') {
           agent {
             kubernetes {
-              label 'pl_scripted_docker_dind'
+              label 'pl_declarative_full_example_build_image_1'
               containerTemplate {
                 name 'maven'
                 image 'maven:3.3.9-jdk-8-alpine'
@@ -25,7 +25,7 @@ pipeline {
         stage('Building Image 2 ') {
           agent {
             kubernetes {
-              label 'pl_scripted_docker_dind1'
+              label 'pl_declarative_full_example_build_image_2'
               containerTemplate {
                 name 'maven'
                 image 'nginx:1.15.1'
