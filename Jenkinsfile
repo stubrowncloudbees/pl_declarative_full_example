@@ -12,18 +12,14 @@ pipeline {
                 image 'maven:3.3.9-jdk-8-alpine'
                 ttyEnabled true
                 command 'cat'
-              }containerTemplate {
-                name 'nginx'
-                image 'nginx:1.15.1'
-                ttyEnabled true
-                command 'cat'
-              }
+
 
             }
 
           }
           steps {
             echo 'building image'
+            sh 'env'
             sh 'sleep 60'
           }
         }
